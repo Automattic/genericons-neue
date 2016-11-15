@@ -53,7 +53,7 @@ module.exports = function(grunt) {
 					<style type="text/css">
 					html {
 						background: #fff;
-						font: 10pt/1 sans-serif;
+						font: 10pt/1 -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
 						color: #999;
 					}
 
@@ -80,21 +80,24 @@ module.exports = function(grunt) {
 						margin: 100px auto;
 					}
 
-					#icons {
+					.icons {
 						padding: 0 20px;
+						overflow: hidden;
+						margin-bottom: 50px;
 					}
 
-					#icons div {
-						width: 48px;
+					.icons div {
+						width: 64px;
 						height: 64px;
 						float: left;
 						padding: 6px 2px;
 						position: relative;
 						font-size: 7pt;
 						cursor: pointer;
+						text-align: center;
 					}
 
-					#icons div p {
+					.icons div p {
 						margin: 0;
 						color: #bbb;
 						text-align: center;
@@ -103,13 +106,13 @@ module.exports = function(grunt) {
 						word-break: break-word;
 					}
 
-					#icons div svg {
+					.icons div svg {
 						width: 48px;
 						height: 48px;
 						fill: #000;
 					}
 
-					#icons div:hover svg {
+					.icons div:hover svg {
 						fill: #1fc1ad;
 					}
 					</style>
@@ -132,9 +135,11 @@ module.exports = function(grunt) {
 
 					<h1>Genericons Neue</h1>
 
+					<p>Generic looking icons, suitable for a blog or simple website.</p>
+
 					{{{svg}}}
 
-					<div id="icons">
+					<div class="icons">
 					{{#each icons}}
 						<div>
 							<svg width="16" height="16" class="genericons-neue genericons-neue-{{name}}">
@@ -144,6 +149,9 @@ module.exports = function(grunt) {
 						</div>
 					{{/each}}
 					</div>
+
+					<p><a href="https://github.com/Automattic/genericons-neue">GitHub</a> &nbsp; <a href="https://www.npmjs.com/package/genericons-neue">NPM</a></p>
+					<p>An <a href="https://automattic.com">Automattic</a> Portrayal</p>
 
 					</body>
 					</html>
@@ -161,6 +169,13 @@ module.exports = function(grunt) {
 					src: 'svg-sprite/genericons-neue-demo.html',
 					dest: 'svg-sprite/index.html'
 			},
+		},
+
+		copy: {
+			main: {
+				src: 'svg-sprite/index.html',
+				dest: 'docs/index.html'
+			}
 		},
 
 		// generate a web font
@@ -265,6 +280,6 @@ module.exports = function(grunt) {
 
 	// Default task(s).
 
-	grunt.registerTask('default', ['svgmin', 'group', 'svgstore', 'rename', 'webfont', 'cssmin','addsquare']);
+	grunt.registerTask('default', ['svgmin', 'group', 'svgstore', 'rename', 'copy', 'webfont', 'cssmin','addsquare']);
 
 };
