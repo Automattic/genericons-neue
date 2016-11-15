@@ -62,7 +62,7 @@ module.exports = function(grunt) {
 					<div id="icons">
 					{{#each icons}}
 						<div>
-							<svg width="16" height="16" class="genericon {{name}}">
+							<svg width="16" height="16" class="genericons-neue genericons-neue-{{name}}">
 							<use xlink:href="#{{name}}" />
 							</svg>
 							<p>{{title}}</p>
