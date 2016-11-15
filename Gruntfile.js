@@ -50,8 +50,83 @@ module.exports = function(grunt) {
 					<head>
 					<title>Genericons Neue</title>
 					<meta name="robots" content="noindex">
-					<link rel="stylesheet" type="text/css" href="genericons-neue-demo.css" />
-					<script src="genericons-neue-demo.js"></script>
+					<style type="text/css">
+					html {
+						background: #fff;
+						font: 10pt/1 sans-serif;
+						color: #999;
+					}
+
+					a:link, a:visited {
+						color: #999;
+					}
+
+					a:active {
+						color: #1fc1ad;
+					}
+
+					h1 {
+						text-align: center;
+						font-size: 24pt;
+					}
+
+					body > p {
+						text-align: center;
+						margin-bottom: 2em;
+					}
+
+					body {
+						max-width: 900px;
+						margin: 100px auto;
+					}
+
+					#icons {
+						padding: 0 20px;
+					}
+
+					#icons div {
+						width: 48px;
+						height: 64px;
+						float: left;
+						padding: 6px 2px;
+						position: relative;
+						font-size: 7pt;
+						cursor: pointer;
+					}
+
+					#icons div p {
+						margin: 0;
+						color: #bbb;
+						text-align: center;
+						overflow: hidden;
+						max-height: 1.9em;
+						word-break: break-word;
+					}
+
+					#icons div svg {
+						width: 48px;
+						height: 48px;
+						fill: #000;
+					}
+
+					#icons div:hover svg {
+						fill: #1fc1ad;
+					}
+					</style>
+					<script type="text/javascript">
+					window.onload = function () {
+					    var rows = document.getElementsByTagName( 'svg' );
+					    for ( i=0; i<rows.length; i++ ) {
+					        rows[i].onclick = function () {
+					            var cssClass = this.getAttribute( 'class' );
+					            var iconID = '#' + cssClass.split(' genericons-neue-')[1];
+					            var fileLocation = 'genericons-neue.svg';
+					            var suggestion = '<svg class="'+ cssClass +'" width="16px" height="16px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + fileLocation + iconID + '"></use></svg>';
+					            window.prompt( 'Copy this, paste in your HTML.', suggestion );
+					        }
+					    }
+					}
+					</script>
 					</head>
 					<body>
 
