@@ -2,6 +2,8 @@
 
 Genericons Neue are generic looking icons, suitable for a blog or simple website.
 
+![Genericons Neue](https://cldup.com/4zc6OeKs24.png)
+
 Genericons Neue is a new version of <a href="https://github.com/Automattic/Genericons">Genericons</a>, with a refreshed look, but no social logos. That means if you use any of the logos from Genericons, *you can't use Genericons Neue as a drop-in replacement*. If you used only icons, you probably can, but be sure to test thoroughly. For a much better set of social logos, please please consider <a href="https://github.com/Automattic/social-logos">Social Logos</a>.
 
 ## Usage
@@ -27,7 +29,7 @@ The Genericons Neue icon set comes in three versions:
 These are not rules, they are guidelines that can be broken with the proper reason.
 
 
-## Building your own Genericons
+## Building your own set
 
 Genericons Neue is built semi-automatically. SVG source files in the `svg` directory are processed and converted into minimized SVGs, a sprite, and an icon font using `grunt`. To build your own version of Genericons Neue, follow these instructions:
 
