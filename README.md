@@ -44,16 +44,6 @@ grunt
 ```
 
 
-## Notes
+## Pixel Grid
 
-**Pixel grid**
-
-Genericons Neue has been designed for a 16x16px grid. That means it'll look sharp at `font-size: 16px` exactly. It'll also be crisp at multiples thereof, such as 32px or 64px. It'll look reasonably crisp at in-between font sizes such as 24px or 48px, but not quite as crisp as 16 or 32. Please don't set the font-size to 17px, though, that'll just look terrible blurry.
-
-**Antialiasing**
-
-If you keep intact the `-webkit-font-smoothing: antialiased;` and `-moz-osx-font-smoothing: grayscale;` CSS properties. That'll make the icons look their best possible, in Firefox and WebKit based browsers.
-
-**optimizeLegibility**
-
-On Android browsers with version 4.2, 4.3, and probably later, Genericons Neue will simply not show up if you're using the CSS property "text-rendering" set to "optimizeLegibility.
+Genericons Neue has been designed for a 16px grid. That means icons will look their best at that size, or 2x multiples thereof, such as 32px or 64px. Icons will also look reasonably crisp at in-between 1.5x multiples such as 24px or 48px, but edges _will_ look blurry at arbitrary multiples. Please don't size them at 17px, for example.
