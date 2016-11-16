@@ -1,5 +1,6 @@
 svg/
 svg-sprite/
+docs/
 codepoints.json
 Gruntfile.js
 icon-template.ai
