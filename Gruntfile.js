@@ -49,7 +49,6 @@ module.exports = function(grunt) {
 					<html>
 					<head>
 					<title>Genericons Neue</title>
-					<meta name="robots" content="noindex">
 					<style type="text/css">
 					html {
 						background: #fff;
