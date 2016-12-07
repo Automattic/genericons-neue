@@ -40,7 +40,7 @@ Genericons Neue is built semi-automatically. SVG source files in the `svg` direc
 ```
 brew install ttfautohint fontforge --with-python
 npm install
-grunt
+npm run build
 ```
 
 

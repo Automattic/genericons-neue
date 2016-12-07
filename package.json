@@ -26,6 +26,9 @@
     "font",
     "blog"
   ],
+  "scripts": {
+	  "build": "grunt"
+  },
   "license": "GPL-2.0",
   "bugs": {
     "url": "https://github.com/Automattic/genericons-neue/issues"
