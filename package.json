@@ -15,7 +15,7 @@
     "grunt-svgmin": "^2.0.1",
     "grunt-svgstore": "^0.3.6",
     "grunt-webfont": "^1.6.0",
-    "handlebars": "^2.0.0",
+    "handlebars": "^4.0.0",
     "multiline": "^0.3.4",
     "rename": "^1.0.3",
     "svgmin": "^0.1.0",
@@ -27,7 +27,7 @@
     "blog"
   ],
   "scripts": {
-	  "build": "grunt"
+    "build": "grunt"
   },
   "license": "GPL-2.0",
   "bugs": {
