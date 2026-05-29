@@ -7,20 +7,14 @@
     "url": "git+https://github.com/Automattic/genericons-neue.git"
   },
   "devDependencies": {
-    "css-what": "^5.0.1",
-    "grunt": "^1.4.1",
-    "grunt-cli": "^1.4.3",
-    "grunt-contrib-copy": "^0.6.0",
-    "grunt-contrib-cssmin": "^4.0.0",
-    "grunt-rename": "^0.1.4",
+    "grunt": "^1.6.2",
+    "grunt-cli": "^1.5.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^5.0.0",
     "grunt-svgmin": "^6.0.1",
     "grunt-svgstore": "^2.0.0",
-    "grunt-webfont": "^1.6.0",
-    "multiline": "^0.3.4",
-    "rename": "^1.0.3",
-    "svgmin": "^0.1.0",
-    "svgstore": "^3.0.0-2",
-    "underscore": "^1.13.1"
+    "grunt-webfont": "^1.7.2",
+    "multiline": "^0.3.4"
   },
   "keywords": [
     "icon",
@@ -28,20 +22,41 @@
     "blog"
   ],
   "scripts": {
-    "build": "grunt",
-    "preinstall": "npx npm-force-resolutions"
+    "build": "grunt"
   },
   "license": "GPL-2.0",
   "bugs": {
     "url": "https://github.com/Automattic/genericons-neue/issues"
   },
   "homepage": "https://github.com/Automattic/genericons-neue#readme",
-  "resolutions": {
-    "css-what": "^5.0.1",
-    "underscore": "^1.12.1",
-    "underscore.string": "^3.3.5",
-    "js-yaml": "^3.13.1",
-    "lodash": "^4.17.12",
-    "xmldom": "^0.5.0"
+  "overrides": {
+    "@xmldom/xmldom": "^0.9.10",
+    "argparse": "^2.0.1",
+    "brace-expansion": "^1.1.13",
+    "braces": "^3.0.3",
+    "cheerio": "^1.2.0",
+    "form-data": "^2.5.5",
+    "grunt-webfont": {
+      "svgo": "^1.3.2"
+    },
+    "handlebars": "^4.7.9",
+    "json-schema": "^0.4.0",
+    "js-yaml": "^3.14.2",
+    "lodash": "^4.18.1",
+    "micromatch": "^4.0.8",
+    "minimatch": "^3.1.4",
+    "minimist": "^1.2.8",
+    "node-gyp": "^12.3.0",
+    "nth-check": "^2.1.1",
+    "picomatch": "^2.3.2",
+    "qs": "^6.15.2",
+    "semver": "^7.7.2",
+    "svg2ttf": "^6.1.0",
+    "ttf2eot": "^3.1.0",
+    "ttf2woff": "^3.0.0",
+    "ttf2woff2": "^8.0.1",
+    "underscore": "^1.13.8",
+    "underscore.string": "^3.3.6",
+    "uuid": "^11.1.1"
   }
 }

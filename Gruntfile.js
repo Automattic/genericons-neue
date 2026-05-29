@@ -163,13 +163,6 @@ module.exports = function(grunt) {
 			},
 		},
 
-		rename: {
-			moveThis: {
-					src: 'svg-sprite/genericons-neue-demo.html',
-					dest: 'svg-sprite/index.html'
-			},
-		},
-
 		copy: {
 			main: {
 				src: 'svg-sprite/index.html',
@@ -217,9 +210,6 @@ module.exports = function(grunt) {
 	// Load the SVGstore
 	grunt.loadNpmTasks('grunt-svgstore');
 
-	// Load the renamer
-	grunt.loadNpmTasks('grunt-rename');
-
 	// Load svgmin
 	grunt.loadNpmTasks('grunt-svgmin');
 
@@ -228,6 +218,11 @@ module.exports = function(grunt) {
 
 	// minify css files
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
+
+	grunt.registerTask( 'renameDemo', 'Rename the generated SVG sprite demo', function() {
+		grunt.file.copy( 'svg-sprite/genericons-neue-demo.html', 'svg-sprite/index.html' );
+		grunt.file.delete( 'svg-sprite/genericons-neue-demo.html' );
+	});
 
 	// Update all files in svg-min to add a <g> group tag
 	grunt.registerTask( 'group', 'Add <g> tag to SVGs', function() {
@@ -279,6 +274,6 @@ module.exports = function(grunt) {
 
 	// Default task(s).
 
-	grunt.registerTask('default', ['svgmin', 'group', 'svgstore', 'rename', 'copy', 'webfont', 'cssmin','addsquare']);
+	grunt.registerTask('default', ['svgmin', 'group', 'svgstore', 'renameDemo', 'copy', 'webfont', 'cssmin','addsquare']);
 
 };
